@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let strings = read_from_file("C:/Users/maelk/Documents/CLionProjects/adventofcode-2020/src/input.txt".parse().unwrap());
+    let strings = read_from_file("src/input.txt".parse().unwrap());
     let numbers = strings.iter().map(|s| s.parse::<isize>().unwrap_or(0)).collect::<Vec<isize>>();
     let values2 = find_sum_2(numbers.clone());
     let values3 = find_sum_3(numbers);

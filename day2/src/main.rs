@@ -2,7 +2,7 @@ use regex::Regex;
 use std::{fmt, fs};
 
 fn main() {
-    let lines = read_from_file("C:/Users/maelk/Documents/CLionProjects/adventofcode-day2/src/input.txt".parse().unwrap());
+    let lines = read_from_file("src/input.txt".parse().unwrap());
     let bools_first_part = lines.iter().map(|s| parse_input(s).unwrap().validate()).collect::<Vec<bool>>();
     let bools_second_part = lines.iter().map(|s| parse_input(s).unwrap().validate_alter_rule()).collect::<Vec<bool>>();
     let mut valid_count_first_part = 0;
